@@ -12,7 +12,7 @@ This tutorial outlines the creation and manegment of Local User Accounts with Po
 
 <h2>Operating Systems Used </h2>
 
-- Windows 11</b> (21H2)
+- Windows 11</b>
 
 
 <h2>Example User Managment</h2>
