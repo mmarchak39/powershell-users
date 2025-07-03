@@ -2,87 +2,56 @@
 <img src="https://github.com/user-attachments/assets/ea48681b-e330-4e26-b5a3-77b44a0e354c"/>
 </p>
 
-<h1>PowerShell - Prerequisites and Installation</h1>
+<h1>PowerShell - User creation and managment</h1>
 This tutorial outlines the creation and manegment of Local User Accounts with PowerShell.<br />
 
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Internet Information Services (IIS)
+- PowerShell
 
 <h2>Operating Systems Used </h2>
 
 - Windows 11</b> (21H2)
 
-<h2>List of Prerequisites</h2>
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
-
-<h2>Installation Steps</h2>
+<h2>Example User Managment</h2>
 
 
 <p>
 <img src="https://github.com/user-attachments/assets/72c20e40-e5bd-4dfa-99d1-35a90f019ec8"/>
 </p>
 <p>
-"To begin, we need to open PowerShell with administrative privileges. This is important because creating or managing user accounts requires elevated permissions.
-I search for 'PowerShell' in the Start menu, then right-click and choose 'Run as Administrator'.
-Once PowerShell opens, you’ll see 'Administrator:' in the window title, which confirms we're running with the correct access level."
+To create or manage a new local user you will first need to open PowerShell with administrative privileges.
+search for 'PowerShell' in the Start menu, then either right-click and choose "Run as Administrator" or select "Run as Administrator" when viewing Powershell within start menu.
 </p>
 <br />
+
+
 
 <p>
 <img src="https://github.com/user-attachments/assets/2583f27e-8a89-4e0f-9100-a7ed6322ea44"/>
 </p>
 <p>
-*"Now I’ll create a new user account called 'TestUser1'.
-Here, I'm using the New-LocalUser command with a few parameters:
+To create a new User I'm using "the New-LocalUser" command with some additional parameters in addition to example names, description, and password:
 
--Name is the username.
+"-Name" is the username. "User1"
 
--FullName is the display name for clarity.
+"-FullName" is the display name. "John-Doe"
 
--Description lets me leave a note, useful for documentation.
+"-Description" allows you to leave a note. "Created for testing"
 
-For the password, I’m using Read-Host -AsSecureString to securely prompt me without showing the typed password on screen.
-Once I hit Enter, the user gets created locally on this machine."*
+"-Password" I’m additionally using "Read-Host -AsSecureString" this will let you create the User without showing the typed password on screen.
 </p>
 <br />
 
-
-<p>
-<img src="https://github.com/user-attachments/assets/8305c8e2-1cf8-42f6-841e-e37adc74de02"/>
-</p>
-<p>
-For the password, I’m using Read-Host -AsSecureString to securely prompt me without showing the typed password on screen.
-Once I hit Enter, the user gets created locally on this machine."*
-</p>
-<br />
 
 
 <p>
 <img src="https://github.com/user-attachments/assets/821020c5-ce5b-4675-ac93-3844ecb98ca1"/>
 </p>
 <p>
-"By default, new local users don’t have admin rights.
-If I want this user to have administrative permissions, I need to add them to the 'Administrators' group.
-This is done using the Add-LocalGroupMember command.
-In this case, I'm adding our new user 'TestUser1' to the 'Administrators' group.
-Always use caution when giving admin rights — only do this for trusted or necessary accounts."
-</p>
-<br />
-
-<p>
-<img src="https://github.com/user-attachments/assets/b994d932-7ad2-4b4b-a12b-db52a154ee3e"/>
-</p>
-<p>
-"By default, new local users don’t have admin rights. If I want this user to have administrative permissions, I need to add them to the 'Administrators' group. This is done using the Add-LocalGroupMember command. In this case, I'm adding our new user 'TestUser1' to the 'Administrators' group. Always use caution when giving admin rights — only do this for trusted or necessary accounts."
+After creating a Password and hitting Enter, the user gets created locally on this machine.
 </p>
 <br />
 
@@ -90,29 +59,36 @@ Always use caution when giving admin rights — only do this for trusted or nece
 <img src="https://github.com/user-attachments/assets/6007f2e9-5f89-4c21-b307-a4802180bba3"/>
 </p>
 <p>
-"To confirm that the new user was successfully created, I can list all local users on the system using the Get-LocalUser command. This outputs all user accounts, including system accounts and any others created manually. I can clearly see 'TestUser1' in the list now, which tells me the creation was successful."
+We can use the "Get-LocalUser" command to verify the account was successfully created. This allows you to view all user accounts, including system accounts and any others created manually.
 </p>
 <br />
+
+
+<p>
+<img src="https://github.com/user-attachments/assets/b994d932-7ad2-4b4b-a12b-db52a154ee3e"/>
+</p>
+<p>
+By default, new local users don’t have admin rights. By using the "Add-LocalGroupMember" command followed by "Group "Administrators" -Member" and then the user ( in this case User1 ) we can add the Local User to the Administrators group.
+</p>
+<br />
+
+
 
 <p>
 <img src="https://github.com/user-attachments/assets/93fb6342-6563-4e49-8c35-64d288f68ee7"/>
 </p>
 <p>
-"If I no longer want this user to have access, I have two options:
-I can disable the account, which prevents them from logging in but keeps their data.
-Or I can remove the user entirely, which deletes the account from the system.
-Here, I’ll first show how to disable the user with Disable-LocalUser, then how to remove them with Remove-LocalUser."
+If you no longer want a local user to have access to the system you can disable the account, this prevents them from logging in but will keep their data.
+Using the "Disable-LocalUser" Command followed by -Name and then the name of the local user you want to disable ( in this case User1 ) you can disable the User. Using the "Get-LocalUser Command you can verify the account is no longer enabled. 
 </p>
 <br />
+
 
 <p>
 <img src="https://github.com/user-attachments/assets/ed14fb5f-83ea-404b-8264-97b19908ff6f"/>
 </p>
 <p>
-"If I no longer want this user to have access, I have two options:
-I can disable the account, which prevents them from logging in but keeps their data.
-Or I can remove the user entirely, which deletes the account from the system.
-Here, I’ll first show how to disable the user with Disable-LocalUser, then how to remove them with Remove-LocalUser."
+If you no longer want the user to be on the system you can use the "Remove-LocalUser." command followed by "-Name" and then the User you want to remove ( in this case User1 ) to remove them entirely including all of their data. Using the "Get-LocalUser" command we can see that "User1" is no longer listed in the systems local users.
 </p>
 <br />
 
