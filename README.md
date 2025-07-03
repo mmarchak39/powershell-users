@@ -33,7 +33,7 @@ search for "PowerShell" in the Start menu, then either right-click and choose "R
 <img src="https://github.com/user-attachments/assets/2583f27e-8a89-4e0f-9100-a7ed6322ea44"/>
 </p>
 <p>
-To create a new User I'm using "the New-LocalUser" command with some additional parameters in addition to example names, description, and password:
+To create a new User I'm using "the New-LocalUser" command with some additional parameters as well as example names, description, and password:
 
 "-Name" is the username. "User1"
 
