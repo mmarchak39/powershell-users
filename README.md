@@ -68,7 +68,7 @@ We can use the "Get-LocalUser" command to verify the account was successfully cr
 <img src="https://github.com/user-attachments/assets/b994d932-7ad2-4b4b-a12b-db52a154ee3e"/>
 </p>
 <p>
-By default, new local users don’t have admin rights. By using the "Add-LocalGroupMember" command followed by "Group "Administrators" -Member" and then the user ( in this case User1 ) we can add the Local User to the Administrators group.
+By default, new local users don’t have admin rights. By using the "Add-LocalGroupMember" command followed by "Group "Administrators" -Member" and then the user (In this case User1) we can add the Local User to the Administrators group.
 </p>
 <br />
 
@@ -79,7 +79,7 @@ By default, new local users don’t have admin rights. By using the "Add-LocalGr
 </p>
 <p>
 If you no longer want a local user to have access to the system you can disable the account, this prevents them from logging in but will keep their data.
-Using the "Disable-LocalUser" Command followed by -Name and then the name of the local user you want to disable ( in this case User1 ) you can disable the User. Using the "Get-LocalUser Command you can verify the account is no longer enabled. 
+Using the "Disable-LocalUser" Command followed by -Name and then the name of the local user you want to disable (In this case User1) you can disable the User. Using the "Get-LocalUser" Command you can verify the account is no longer enabled. 
 </p>
 <br />
 
@@ -88,7 +88,7 @@ Using the "Disable-LocalUser" Command followed by -Name and then the name of the
 <img src="https://github.com/user-attachments/assets/ed14fb5f-83ea-404b-8264-97b19908ff6f"/>
 </p>
 <p>
-If you no longer want the user to be on the system you can use the "Remove-LocalUser." command followed by "-Name" and then the User you want to remove ( in this case User1 ) to remove them entirely including all of their data. Using the "Get-LocalUser" command we can see that "User1" is no longer listed in the systems local users.
+If you no longer want the user to be on the system you can use the "Remove-LocalUser." command followed by "-Name" and then the User you want to remove (In this case User1) to remove them entirely including all of their data. Using the "Get-LocalUser" command we can see that "User1" is no longer listed in the systems local users.
 </p>
 <br />
 
