@@ -68,7 +68,7 @@ We can use the "Get-LocalUser" command to verify the account was successfully cr
 <img src="https://github.com/user-attachments/assets/b994d932-7ad2-4b4b-a12b-db52a154ee3e"/>
 </p>
 <p>
-By default, new local users don’t have admin rights. By using the "Add-LocalGroupMember" command followed by "Group "Administrators" -Member" and then the user (In this case User1) we can add the Local User to the Administrators group.
+By default, new local users don’t have admin rights. By using the "Add-LocalGroupMember" command followed by "-Group "Administrators" -Member" and then the user (In this case User1) we can add the Local User to the Administrators group.
 </p>
 <br />
 
