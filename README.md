@@ -23,7 +23,7 @@ This tutorial outlines the creation and manegment of Local User Accounts with Po
 </p>
 <p>
 To create or manage a new local user you will first need to open PowerShell with administrative privileges.
-search for 'PowerShell' in the Start menu, then either right-click and choose "Run as Administrator" or select "Run as Administrator" when viewing Powershell within start menu.
+search for "PowerShell" in the Start menu, then either right-click and choose "Run as Administrator" or select "Run as Administrator" when viewing Powershell within start menu.
 </p>
 <br />
 
